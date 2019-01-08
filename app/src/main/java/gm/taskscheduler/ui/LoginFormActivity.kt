@@ -23,9 +23,7 @@ class LoginFormActivity : AppCompatActivity() {
         val loginField = findViewById<EditText>(R.id.editText2)
         val passwordField = findViewById<EditText>(R.id.editText)
 
-        //showToast("test")
-
-        if ((loginField.value == LOGIN) && (passwordField.value == PASSWORD))
+        if (loginField.value == LOGIN && passwordField.value == PASSWORD)
             showToast("welcome to the club, buddy")
         else
             showToast("get your ass back, fucking slave")
@@ -35,5 +33,5 @@ class LoginFormActivity : AppCompatActivity() {
         get() = this.text.toString()
         set(value) = this.setText(value)
 
-   private fun showToast(text: String) = makeText(applicationContext, text, Toast.LENGTH_LONG).show()
+    private fun showToast(text: String) = makeText(applicationContext, text, Toast.LENGTH_LONG).show()
 }
